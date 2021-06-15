@@ -3,8 +3,8 @@ function randint(min, max) {
 }
 var map = [];
 
-var width   = 100;
-var height  = 100;
+var width   = 10;
+var height  = 10;
 
 for(let y = 0; y != height ; ++y){
     let ar = [];
@@ -30,12 +30,13 @@ for(let y = 0; y != height;y++){
     let str = "";
     for(let x = 0;x != width;x++){
         if (map[y][x] <= 2)
-            str += " ";
+            str += "▃";
         else if (map[y][x] >= 4 && map[y][x] <= 6)
-            str += "░";
+            str += "▆";
         else if (map[y][x] >= 7)
-            str += "▓";
-        
+            str += "█";
+        else 
+            str += "░"
     }
     console.log(str);
 }
